@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MS피하기</title>
+    <link
+      rel="shortcut icon"
+      href="/images/ipziopp_dot.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      @font-face {
+        font-family: "CustomFont";
+        src: url("DungGeunMo.ttf");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <audio
+        class="bgm"
+        id="bgm_normal"
+        src="./bgm/bgm_normal.mp3"
+        controls
+        autoplay
+        style="display: none"
+      ></audio>
+      <audio
+        class="bgm"
+        id="bgm_hard"
+        src="./bgm/bgm_hard-10.mp3"
+        controls
+        style="display: none"
+      ></audio>
+      <audio
+        class="bgm"
+        id="gameover"
+        src="./bgm/gameover.mp3"
+        controls
+        style="display: none"
+      ></audio>
+
+      <div>
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+    <!-- 게임 오버 모달 -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="head">
+          <button class="btn-close">X</button>
+        </div>
+        <div class="content">
+          <p class="gameover">GAME OVER</p>
+          <p class="myScore">내 점수 :</p>
+          <form id="form" action="/recordpro" method="post">
+            <span>이름:</span>
+            <input class="inputName" name="name" type="text" /><br />
+            <span>지역: </span>
+            <span id="myLocation"></span>
+            <input type="hidden" id="scoreInput" name="score" value=""/>
+            <input type="hidden" id="locationInput" name="location" />
+          </form>
+            <br /><br /><br />
+            <a
+              class="submit"
+              href="#"
+              onclick="document.getElementById('form').submit();"
+            >
+              <div class="buttonContainer">
+                <img class="buttonImg" src="/images/button3.png" />
+                <div class="buttonText">랭킹 등록</div>
+              </div>
+            </a>
+<!--            <a class="" href="/scorelist.html">-->
+<!--              <div class="buttonContainer">-->
+<!--                <img class="buttonImg" src="/images/button4.png" />-->
+<!--                <div class="buttonText">지역 랭킹</div>-->
+<!--              </div>-->
+<!--            </a>-->
+            <br />
+
+          <div></div>
+          <a class="replayButton" href="#">
+            <div class="buttonContainer">
+              <img class="buttonImg" src="/images/button2.png" />
+              <div class="buttonText">다시 하기</div>
+            </div>
+          </a>
+          <a href="index.html">
+            <div class="buttonContainer">
+              <img class="buttonImg" src="/images/button1.png" />
+              <div class="buttonText">처음으로</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

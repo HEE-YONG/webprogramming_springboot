@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MS피하기</title>
+    <link
+      rel="shortcut icon"
+      href="/images/ipziopp_dot.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/scorelist.css" />
+  </head>
+  <body>
+    <div class="main">
+      <p>상위 5등안에 들어라</p>
+      <table class="table" border="1">
+        <tr>
+          <th>이름</th>
+          <th>점수</th>
+          <th>지역</th>
+        </tr>
+        <tr th:each="score : ${list}">
+          <td th:text="${score.name}">이름</td>
+          <td th:text="${score.score}">점수</td>
+          <td th:text="${score.location}">지역</td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <a class="button" href="/index.html">
+          <div class="buttonContainer">
+            <img class="buttonImg" src="/images/button1.png" />
+            <div class="buttonText">처음 으로</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MS피하기</title>
+    <link
+      rel="shortcut icon"
+      href="/images/ipziopp_dot.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">명수 피하기</div>
+      <div class="buttons">
+        <a class="button" href="main.html">
+          <div class="buttonContainer">
+            <img class="buttonImg" src="/images/button1.png" />
+            <div class="buttonText">게임 시작</div>
+          </div>
+        </a>
+        <br />
+        <a class="button trigger" href="#">
+          <div class="buttonContainer">
+            <img class="buttonImg" src="/images/button2.png" />
+            <div class="buttonText">게임 방법</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- 게임 방법 모달 -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="head">
+          <button class="btn-close">X</button>
+        </div>
+        <div class="content">
+          스페이스바로 점프하여 날아오는 명수헤드를 피하세요<br />점프는 연속
+          두번까지 가능해요<br /><br /><br /><br />하드모드가 실행되면 <- ->
+          키로 이브지옵프를 피하세요<br />아! 쿠텐베르크도요
+        </div>
+      </div>
+    </div>
+    <audio
+      class="bgm"
+      id="bgm"
+      src="./bgm/bgm.mp3"
+      controls
+      autoplay
+      style="display: none"
+    ></audio>
+    <script src="index.js"></script>
+  </body>
+</html>
